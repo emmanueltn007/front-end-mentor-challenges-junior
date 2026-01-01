@@ -1,4 +1,5 @@
 import DesignedForFuture from "./components/DesignedForFuture";
+import Features from "./components/Features";
 import Header from "./components/Header";
 import SignUp from "./components/SignUp";
 import StateOfArt from "./components/StateOfArt";
@@ -14,6 +15,7 @@ function App() {
 
       <DesignedForFuture />
       <StateOfArt />
+      <Features />
     </div>
   );
 }
