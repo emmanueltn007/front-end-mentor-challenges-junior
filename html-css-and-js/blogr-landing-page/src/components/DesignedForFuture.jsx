@@ -18,7 +18,7 @@ function DesignedForFuture() {
           />
         </div>
         <div className="flex flex-col gap-4 md:row-start-1">
-          <div>
+          <div className="flex flex-col gap-2">
             <h2 className="text-2xl md:text-xl font-semibold">
               Introducing an extensible editor
             </h2>
@@ -31,7 +31,7 @@ function DesignedForFuture() {
               change the looks of a blog.
             </p>
           </div>
-          <div>
+          <div className="flex flex-col gap-2">
             <h2 className="text-2xl md:text-xl font-semibold">Robust content management</h2>
             <p>
               Flexible content management enables users to easily move through
