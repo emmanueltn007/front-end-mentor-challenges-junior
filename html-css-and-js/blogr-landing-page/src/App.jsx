@@ -7,9 +7,13 @@ import StateOfArt from "./components/StateOfArt";
 
 function App() {
   return (
-    <div className="">
-      <div className="pt-16 px-8 bg-[hsl(356,100%,66%)] bg-[url('/images/bg-pattern-intro-mobile.svg')] bg-center bg-no-repeat bg-cover
-                      rounded-bl-4xl">
+    <div className="flex flex-col gap-16 overflow-hidden">
+      <div className="pt-16 px-8 md:px-32 rounded-bl-[128px]
+                      bg-[url('/images/bg-pattern-intro-mobile.svg'),linear-gradient(90deg,_hsl(13,100%,72%),_hsl(353,100%,62%))]
+    md:bg-[url('/images/bg-pattern-intro-desktop.svg'),linear-gradient(90deg,_hsl(13,100%,72%),_hsl(353,100%,62%))]
+    bg-center bg-no-repeat
+    bg-coversss"
+      >
         <Header />
         <SignUp />
       </div>

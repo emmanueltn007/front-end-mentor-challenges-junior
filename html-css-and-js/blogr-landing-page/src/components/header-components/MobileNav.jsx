@@ -4,7 +4,7 @@ function MobileNav({ isOpen, setIsOpen, children }) {
   return (
     <nav className="md:hidden">
       <button
-        className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
+        className="cursor-pointer hover:scale-110 transition-transform duration-300"
         onClick={handleMenuToggle}
       >
         <img
