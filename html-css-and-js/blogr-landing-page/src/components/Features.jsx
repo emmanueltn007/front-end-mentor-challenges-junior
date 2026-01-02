@@ -1,21 +1,21 @@
 function Features() {
   return (
-    <section className="flex flex-col md:grid md:grid-cols-2 max-md:px-8">
-      <div>
+    <section className="flex flex-col md:grid md:grid-cols-2 max-md:px-8 relative px-8 md:px-32 md:py-32">
+      <div className="">
         <img
           className="md:hidden"
           src="/images/illustration-laptop-mobile.svg"
           alt="illustration laptop mobile image"
         />
         <img
-          className="max-md:hidden"
+          className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/3 max-md:hidden max-w-xl"
           src="/images/illustration-laptop-desktop.svg"
           alt="illustration laptop desktop image"
         />
       </div>
-      <div className="flex flex-col gap-4 text-[hsl(208,49%,24%)] max-md:text-center">
+      <div className="flex flex-col gap-4 text-[hsl(208,49%,24%)] max-md:text-center justify-end">
         <div>
-          <h2 className="text-xl font-semibold">Free, open, simple</h2>
+          <h2 className="text-2xl md:text-xl font-semibold">Free, open, simple</h2>
           <p>
             Blogr is a free and open source application backed by a large
             community of helpful developers. It supports features such as code
@@ -26,7 +26,7 @@ function Features() {
           </p>
         </div>
         <div>
-          <h2 className="text-xl font-semibold">Powerful tooling</h2>
+          <h2 className="text-2xl md:text-xl font-semibold">Powerful tooling</h2>
           <p>
             Batteries included. We built a simple and straightforward CLI tool
             that makes customization and deployment a breeze, but capable of
