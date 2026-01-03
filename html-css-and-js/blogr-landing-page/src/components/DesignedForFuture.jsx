@@ -5,7 +5,7 @@ function DesignedForFuture() {
         Designed for the future
       </h2>
       <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-1 gap-8">
-        <div className="md:col-start-2 md:absolute md:translate-x-1/4 md:-translate-y-1/2 md:top-1/2 md:right-0">
+        <div className="md:col-start-2 max-md:ml-auto max-md:mr-auto md:absolute md:translate-x-1/4 md:-translate-y-1/2 md:top-1/2 md:right-0">
           <img
             className="md:hidden"
             src="/images/illustration-editor-mobile.svg"

@@ -16,8 +16,9 @@ function Header () {
                     openItem={openItem}
                     setOpenItem={setOpenItem}
                     divClass="text-[hsl(0,0%,87%)] font-semibold flex gap-4 max-md:hidden" 
-                    buttonClass="cursor-pointer hover:text-white flex items-center gap-2
+                    spanClass="
                                 after:content-[''] relative after:absolute after:block after:h-[2px] after:bottom-0 after:left-0 after:bg-white after:w-0 hover:after:w-full after:transition-all after:duration-300"
+                    buttonClass="cursor-pointer  hover:text-white flex items-center gap-2"
                     imageClass={``}
                 />
             </div>

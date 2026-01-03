@@ -1,31 +1,61 @@
-function NavItems({ divClass, buttonClass, isOpen, openItem, setOpenItem }) {
+import React from "react";
+import dropdownItems from "../../data/navDropdownItems";
 
-  const handleNavItemToggle = (item) =>
-    setOpenItem((prev) => (prev === item ? null : item));
+function NavItems({
+  divClass,
+  spanClass,
+  buttonClass,
+  isOpen,
+  openItem,
+  setOpenItem,
+}) {
 
-  const items = ["Products", "Company", "Connect"];
+  const handleNavItemToggle = (key) =>
+    setOpenItem((prev) => (prev === key ? null : key));
+
+  const items = [
+    { label: "Products", key: "product" },
+    { label: "Company", key: "company" },
+    { label: "Connect", key: "connect" },
+  ];
 
   return (
     <div className={divClass}>
       {items.map((item) => {
         return (
-          <button
-            key={item}
-            onClick={() => handleNavItemToggle(item)}
-            className={buttonClass}
-          >
-            {item}
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" 
-                className={`transition duration-300 ease-in-out ${openItem === item ? "rotate-180" : "text-white"}`}>
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                opacity=".75"
-                d="M1 1l4 4 4-4"
-              />
-            </svg>
-          </button>
+          <React.Fragment key={item.key}>
+            <button
+              onClick={() => handleNavItemToggle(item.key)}
+              className={buttonClass}
+            >
+              <span className={spanClass}>{item.label}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="7"
+                className={`transition duration-300 ease-in-out ${
+                  openItem === item.key ? "rotate-180" : "text-white"
+                }`}
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  opacity=".75"
+                  d="M1 1l4 4 4-4"
+                />
+              </svg>
+            </button>
+
+            {/* DROPDOWN */}
+            {openItem === item.key && (
+              <div>
+                {(dropdownItems[item.key] || []).map((link) => (
+                  <button key={link}>{link}</button>
+                ))}
+              </div>
+            )}
+          </React.Fragment>
         );
       })}
 
