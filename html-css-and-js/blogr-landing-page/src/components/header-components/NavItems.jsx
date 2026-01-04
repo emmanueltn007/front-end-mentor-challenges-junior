@@ -2,16 +2,18 @@ import React from "react";
 import dropdownItems from "../../data/navDropdownItems";
 
 function NavItems({
-  dropdownContainer,
-  divClass,
-  spanClass,
-  imageClass,
-  buttonClass,
-  dropdownClass,
-  dropdownButtonClass,
   isOpen,
   openItem,
   setOpenItem,
+  container,
+  dropdownMenu,
+  activeColor,
+  notActiveColor,
+  arrowActive,
+  arrowNotActive,
+  labelClass,
+  labelContainer,
+  containerAll
 }) {
 
   const handleNavItemToggle = (key) =>
@@ -24,22 +26,23 @@ function NavItems({
   ];
 
   return (
-    <div className={divClass}>
+    <div className={`flex gap-4 ${container}`}>
       {items.map((item) => {
         return (
-          <div className={`relative ${dropdownContainer}`} key={item.key}>
+          <div className={`relative ${containerAll}`} key={item.key}>
             <button
+              className={`flex items-center gap-2 cursor-pointer ${labelContainer}`}
               onClick={() => handleNavItemToggle(item.key)}
-              className={buttonClass}
             >
-              <span className={spanClass}>{item.label}</span>
+              <span className={`${labelClass} ${openItem === item.key ? activeColor : notActiveColor}`}>{item.label}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
                 height="7"
-                className={`transition duration-300 ease-in-out ${imageClass} ${
-                  openItem === item.key ? "rotate-180" : ""
-                }`}
+                className={`transition duration-300 ease-in-out 
+                  ${openItem === item.key ? "rotate-180" : ""}
+                   ${openItem === item.key ? arrowActive : arrowNotActive}
+                  `}
               >
                 <path
                   fill="none"
@@ -53,9 +56,9 @@ function NavItems({
 
             {/* DROPDOWN */}
             {openItem === item.key && (
-              <div className={`flex flex-col items-start ${dropdownClass}`}>
+              <div className={`flex flex-col gap-2 ${dropdownMenu}`} >
                 {(dropdownItems[item.key] || []).map((link) => (
-                  <button className={dropdownButtonClass} key={link}>{link}</button>
+                  <button className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out" key={link}>{link}</button>
                 ))}
               </div>
             )}
@@ -67,10 +70,10 @@ function NavItems({
         <>
           <hr className="w-full" />
           <div className="flex flex-col gap-4 font-semibold w-full">
-            <button className="text-[hsl(208,49%,24%)] cursor-pointer">
+            <button className="text-[hsl(208,49%,24%)] cursor-pointer border-2 border-transparent hover:border-[hsl(208,49%,24%)] py-2 rounded-3xl transition duration-300 ease-in-out">
               Login
             </button>
-            <button className="cursor-pointer text-white bg-[linear-gradient(90deg,hsl(13,100%,72%),hsl(353,100%,62%))] py-2 rounded-3xl">
+            <button className="cursor-pointer text-white bg-[linear-gradient(90deg,hsl(13,100%,72%),hsl(353,100%,62%))] py-2 rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
               Sign Up
             </button>
           </div>

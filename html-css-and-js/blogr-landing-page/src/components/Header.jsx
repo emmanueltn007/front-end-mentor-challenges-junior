@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileNav from "./header-components/MobileNav";
 import NavItems from "./header-components/NavItems";
 
@@ -6,8 +6,24 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [openItem, setOpenItem] = useState(null);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen])
+
   return (
     <header className="flex items-center justify-between relative text-[hsl(0,0%,87%)]">
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/40 z-40" onClick={() => setIsOpen(false)}></div>
+      )}
       <div className="cursor-pointer flex items-center md:gap-16">
         <img className="h-8" src="/images/logo.svg" alt="blogr logo" />
 
@@ -15,12 +31,15 @@ function Header() {
         <NavItems
           openItem={openItem}
           setOpenItem={setOpenItem}
-          divClass="text-[hsl(0,0%,87%)] font-semibold flex gap-4 max-md:hidden"
-          spanClass="
-                                after:content-[''] relative after:absolute after:block after:h-[2px] after:bottom-0 after:left-0 after:bg-white after:w-0 hover:after:w-full after:transition-all after:duration-300"
-          buttonClass="cursor-pointer  hover:text-white flex items-center gap-2"
-          dropdownClass="absolute translate-y-4 font-normal bg-white text-[hsl(208,49%,24%)] rounded-md py-4 pl-4 pr-8 gap-2 shadow-md shadow-gray-500"
-          dropdownButtonClass="hover:scale-110 transition duration-300 ease-in-out"
+          container="max-md:hidden"
+          dropdownMenu="absolute top-8 bg-white py-4 pl-4 pr-8 rounded-md shadow-md shadow-gray-500 text-[hsl(208,49%,24%)] flex flex-col 
+                        gap-4 items-start"
+          activeColor="text-white"
+          notActiveColor="text-gray-300"
+          arrowActive="text-white"
+          arrowNotActive="text-gray-300"
+          labelClass="font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:w-0 after:h-0.5 hover:after:w-full
+                      after:transition-all after:duration-300 after:ease-in-out hover:text-white"
         />
       </div>
 
@@ -28,16 +47,14 @@ function Header() {
       <MobileNav isOpen={isOpen} setIsOpen={setIsOpen}>
         <NavItems
           isOpen={isOpen}
-          divClass="p-8 bg-white flex flex-col items-center gap-4 w-full absolute left-1/2 top-16 -translate-x-1/2 rounded-xl shadow-md shadow-gray-500"
-          buttonClass="text-[hsl(208,49%,24%)] font-semibold cursor-pointer flex items-center ml-auto mr-auto gap-2"
           openItem={openItem}
           setOpenItem={setOpenItem}
-          imageClass={` ${
-            openItem ? "text-[hsl(356,100%,66%)]" : "text-[hsl(355,100%,74%)]"
-          }`}
-          dropdownClass="bg-gray-400 rounded-md p-4 mt-4 flex flex-col gap-4"
-          dropdownButtonClass="w-full text-[hsl(208,49%,24%)] font-semibold"
-          dropdownContainer="w-full"
+          container="font-semibold absolute p-4 bg-white shadow-md shadow-gray-500 rounded-md left-0 right-0 top-16 flex flex-col items-center"
+          dropdownMenu="bg-gray-300 rounded-md py-4 mt-4 text-[hsl(208,49%,24%)]"
+          labelContainer="flex ml-auto mr-auto"
+          containerAll="w-full"
+          activeColor="text-gray-500"
+          notActiveColor="text-[hsl(208,49%,24%)]"
         />
       </MobileNav>
 
