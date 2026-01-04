@@ -12,7 +12,7 @@ function App() {
                       bg-[url('/images/bg-pattern-intro-mobile.svg'),linear-gradient(90deg,_hsl(13,100%,72%),_hsl(353,100%,62%))]
     md:bg-[url('/images/bg-pattern-intro-desktop.svg'),linear-gradient(90deg,hsl(13,100%,72%),hsl(353,100%,62%))]
     bg-center bg-no-repeat
-    bg-coversss"
+    bg-cover"
       >
         <Header />
         <SignUp />
