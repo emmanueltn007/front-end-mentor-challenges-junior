@@ -2,9 +2,13 @@ import React from "react";
 import dropdownItems from "../../data/navDropdownItems";
 
 function NavItems({
+  dropdownContainer,
   divClass,
   spanClass,
+  imageClass,
   buttonClass,
+  dropdownClass,
+  dropdownButtonClass,
   isOpen,
   openItem,
   setOpenItem,
@@ -23,7 +27,7 @@ function NavItems({
     <div className={divClass}>
       {items.map((item) => {
         return (
-          <React.Fragment key={item.key}>
+          <div className={`relative ${dropdownContainer}`} key={item.key}>
             <button
               onClick={() => handleNavItemToggle(item.key)}
               className={buttonClass}
@@ -33,8 +37,8 @@ function NavItems({
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
                 height="7"
-                className={`transition duration-300 ease-in-out ${
-                  openItem === item.key ? "rotate-180" : "text-white"
+                className={`transition duration-300 ease-in-out ${imageClass} ${
+                  openItem === item.key ? "rotate-180" : ""
                 }`}
               >
                 <path
@@ -49,19 +53,19 @@ function NavItems({
 
             {/* DROPDOWN */}
             {openItem === item.key && (
-              <div>
+              <div className={`flex flex-col items-start ${dropdownClass}`}>
                 {(dropdownItems[item.key] || []).map((link) => (
-                  <button key={link}>{link}</button>
+                  <button className={dropdownButtonClass} key={link}>{link}</button>
                 ))}
               </div>
             )}
-          </React.Fragment>
+          </div>
         );
       })}
 
       {isOpen && (
         <>
-          <hr />
+          <hr className="w-full" />
           <div className="flex flex-col gap-4 font-semibold w-full">
             <button className="text-[hsl(208,49%,24%)] cursor-pointer">
               Login
