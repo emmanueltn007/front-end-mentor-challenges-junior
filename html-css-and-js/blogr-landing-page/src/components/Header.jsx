@@ -55,6 +55,8 @@ function Header() {
           containerAll="w-full"
           activeColor="text-gray-500"
           notActiveColor="text-[hsl(208,49%,24%)]"
+          arrowActive="text-red-500"
+          arrowNotActive="text-red-700"
         />
       </MobileNav>
 
