@@ -1,18 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavItems from "./nav-items-reuse/NavItems";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+
+    return () => {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
+
   const handleMenuOpen = () => setIsOpen(true);
   return (
     <header className="flex justify-between items-center">
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/40 z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
       <div>
         <img className="w-12" src="/assets/images/logo.svg" alt="logo image" />
       </div>
 
       {/* MOBILE NAV */}
-      <nav className="md:hidden">
+      <nav className="md:hidden z-50">
         <button
           onClick={handleMenuOpen}
           className="cursor-pointer flex items-center"
