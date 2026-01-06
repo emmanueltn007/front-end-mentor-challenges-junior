@@ -1,4 +1,5 @@
 import CreativesSection from "./components/CreativesSection";
+import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import PhotographyGraphicDesign from "./components/Photography&GraphicDesign";
 import StandOut from "./components/StandOut";
@@ -18,6 +19,7 @@ function App() {
       <StandOut />
       <PhotographyGraphicDesign />
       <Testimonials />
+      <Gallery />
     </>
   );
 }
