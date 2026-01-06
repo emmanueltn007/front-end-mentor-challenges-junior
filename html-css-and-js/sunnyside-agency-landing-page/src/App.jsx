@@ -2,6 +2,7 @@ import CreativesSection from "./components/CreativesSection";
 import Header from "./components/Header";
 import PhotographyGraphicDesign from "./components/Photography&GraphicDesign";
 import StandOut from "./components/StandOut";
+import Testimonials from "./components/Testimonials";
 import Transform from "./components/Transform";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Transform />
       <StandOut />
       <PhotographyGraphicDesign />
+      <Testimonials />
     </>
   );
 }
