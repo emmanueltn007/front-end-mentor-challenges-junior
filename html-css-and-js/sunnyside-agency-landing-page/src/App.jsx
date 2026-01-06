@@ -1,5 +1,6 @@
 import CreativesSection from "./components/CreativesSection";
 import Header from "./components/Header";
+import StandOut from "./components/StandOut";
 import Transform from "./components/Transform";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <CreativesSection />
       </div>
       <Transform />
+      <StandOut />
     </>
   );
 }
