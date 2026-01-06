@@ -2,7 +2,7 @@ import items from "../../data/navItems";
 
 function NavItems ({ navClass, container, listClass, itemClass, buttonClass, setIsOpen }) {
 
-    const handleMenuToggle = () => setIsOpen(prev => !prev)
+    const handleMenuToggle = () => setIsOpen(prev => !prev);
 
     return (
         <nav className={navClass}>
