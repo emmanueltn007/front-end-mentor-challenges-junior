@@ -1,4 +1,5 @@
 import CreativesSection from "./components/CreativesSection";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import PhotographyGraphicDesign from "./components/Photography&GraphicDesign";
@@ -20,6 +21,7 @@ function App() {
       <PhotographyGraphicDesign />
       <Testimonials />
       <Gallery />
+      <Footer />
     </>
   );
 }
