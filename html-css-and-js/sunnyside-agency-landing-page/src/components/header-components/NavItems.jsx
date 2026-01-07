@@ -1,6 +1,6 @@
 import items from "../../data/navItems";
 
-function NavItems ({ navClass, container, listClass, itemClass, buttonClass, setIsOpen }) {
+function NavItems ({ navClass, container, listClass, itemClass, buttonClass, setIsOpen, style }) {
 
     const handleMenuToggle = () => setIsOpen(prev => !prev);
 
@@ -9,7 +9,7 @@ function NavItems ({ navClass, container, listClass, itemClass, buttonClass, set
             <button className="md:hidden cursor-pointer" onClick={handleMenuToggle}>
                 <img src="/images/icon-hamburger.svg" alt="menu icon" />
             </button>
-            <div className={container}>
+            <div className={container} style={style}>
                 <ul className={listClass}>
                     {items.map((item) => {
                         return (

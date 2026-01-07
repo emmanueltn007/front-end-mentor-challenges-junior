@@ -16,7 +16,8 @@ function Footer() {
       <nav className="flex flex-col gap-16">
         <ul className="flex gap-4 text-[hsl(167,40%,24%)] font-medium">
           {items.map((item) => (
-            <li className="cursor-pointer" key={item}>
+            <li className="cursor-pointer hover:text-[hsl(0,100%,100%)] transtion duration-300 ease-in-out" 
+              key={item}>
               {item}
             </li>
           ))}

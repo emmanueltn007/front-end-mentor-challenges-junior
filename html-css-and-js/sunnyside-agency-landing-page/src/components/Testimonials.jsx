@@ -2,8 +2,8 @@ import clients from "../data/clientTestimonialsData";
 
 function Testimonials() {
     return (
-        <section>
-            <h4 className="text-center">Client Testimonials</h4>
+        <section className="flex flex-col gap-16 p-24">
+            <h4 className="text-center text-[hsl(210,4%,67%)] text-lg font-bold tracking-[1rem]">Client Testimonials</h4>
             <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-4">
                 {clients.map((client) => {
                     return (
@@ -16,10 +16,10 @@ function Testimonials() {
                                 src={client.avatar} 
                                 alt={client.name} 
                             />
-                            <p>{client.review}</p>
+                            <p className="text-[hsl(212,27%,19%)] text-sm">{client.review}</p>
                             <div>
-                                <h5>{client.name}</h5>
-                                <p className="text-gray-400">{client.position}</p>
+                                <h5 className="text-[hsl(212,27%,19%)] font-bold text-md">{client.name}</h5>
+                                <p className="text-gray-400 text-sm">{client.position}</p>
                             </div>
                             
                         </div>
