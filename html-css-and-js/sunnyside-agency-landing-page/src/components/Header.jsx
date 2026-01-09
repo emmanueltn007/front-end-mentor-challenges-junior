@@ -5,7 +5,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center relative">
+    <header className="flex justify-between items-center relative px-8 md:px-12 pt-12 md:pt-16">
       <div className="text-white">
         <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
           <path
