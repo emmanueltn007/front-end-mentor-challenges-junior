@@ -33,9 +33,9 @@ function Header() {
         navClass="max-md:hidden"
         container="flex items-center gap-4"
         listClass="flex gap-4 text-white"
-        itemClass="cursor-pointer relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5
+        itemClass="font-['Barlow'] cursor-pointer relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5
                    after:bg-[hsl(51,100%,49%)] after:rounded-3xl hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
-        buttonClass="bg-[hsl(0,100%,100%)] text-[hsl(212,27%,19%)] py-2 px-4 rounded-3xl cursor-pointer
+        buttonClass="font-['Fraunces'] bg-[hsl(0,100%,100%)] text-[hsl(212,27%,19%)] py-2 px-4 rounded-3xl cursor-pointer
                     hover:bg-[hsl(0,100%,100%)]/45 hover:text-[hsl(0,100%,100%)] transition-all duration-300 ease-in-out"
       />
     </header>

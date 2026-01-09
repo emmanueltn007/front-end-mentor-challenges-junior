@@ -1,4 +1,4 @@
-const photographyGraphicDesignData = {
+const photographyGraphicDesign = {
     graphic_design: {
         header: "Graphic Design",
         description: "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
@@ -9,4 +9,4 @@ const photographyGraphicDesignData = {
     },
 };
 
-export default photographyGraphicDesignData;
+export default photographyGraphicDesign;

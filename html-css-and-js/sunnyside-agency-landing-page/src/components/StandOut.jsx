@@ -6,11 +6,11 @@ function StandOut () {
                 <img className="max-md:hidden" src="/images/desktop/image-stand-out.jpg" alt="stand out image" />
             </div>
             <div className="text-center flex flex-col justify-center gap-8 p-8">
-                <h2 className="text-2xl font-bold">Stand out to the right audience</h2>
-                <p className="text-[hsl(232,10%,55%)]">
+                <h2 className="text-2xl font-bold font-['Fraunces']">Stand out to the right audience</h2>
+                <p className="text-[hsl(232,10%,55%)] font-['Barlow']">
                     Use a combination of words and images to create a compelling visual experience that resonates with your target audience.
                 </p>
-                <button className="text-md font-bold">LEARN MORE</button>
+                <button className="text-md font-bold font-['Fraunces']">LEARN MORE</button>
             </div>
         </section>
     );

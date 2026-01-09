@@ -16,7 +16,7 @@ function Footer() {
       <nav className="flex flex-col gap-16">
         <ul className="flex gap-4 text-[hsl(167,40%,24%)] font-medium">
           {items.map((item) => (
-            <li className="cursor-pointer hover:text-[hsl(0,100%,100%)] transtion duration-300 ease-in-out" 
+            <li className="cursor-pointer font-['Barlow'] hover:text-[hsl(0,100%,100%)] transtion duration-300 ease-in-out" 
               key={item}>
               {item}
             </li>
@@ -25,7 +25,7 @@ function Footer() {
         <div className="flex justify-center gap-4">
           {socials.map((social) => {
             return (
-              <a href={social.href}>
+              <a href={social.href} key={social.name}>
                 <img src={social.src} alt={social.name} />
               </a>
             );
