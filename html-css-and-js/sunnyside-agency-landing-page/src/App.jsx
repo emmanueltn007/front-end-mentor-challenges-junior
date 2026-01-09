@@ -3,9 +3,8 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import PhotographyGraphicDesign from "./components/Photography&GraphicDesign";
-import StandOut from "./components/StandOut";
 import Testimonials from "./components/Testimonials";
-import Transform from "./components/Transform";
+import FeaturesMain from "./FeaturesMain";
 
 function App() {
   return (
@@ -16,8 +15,7 @@ function App() {
         <Header />
         <CreativesSection />
       </div>
-      <Transform />
-      <StandOut />
+      <FeaturesMain />
       <PhotographyGraphicDesign />
       <Testimonials />
       <Gallery />

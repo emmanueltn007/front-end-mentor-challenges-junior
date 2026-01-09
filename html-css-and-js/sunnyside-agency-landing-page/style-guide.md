@@ -49,14 +49,3 @@ We provide the required social icons. But, if you prefer, you can use a font ico
 - [Ionicons](https://ionicons.com)
 
 > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
-
-
-<div className="bg-[url('/images/mobile/image-graphic-design.jpg')] md:bg-[url('/images/desktop/image-graphic-design.jpg')] 
-                            bg-center bg-no-repeat bg-cover flex flex-col text-center justify-end gap-4 p-16">
-                <h3 className="text-xl font-bold font-['Fraunces']">Graphic Design</h3>
-                <p className="text-[hsl(212,27%,19%)] font-['Barlow']">
-                    Great design makes you memorable. We deliver artwork that
-                    underscores your brand message and captures potential clients'
-                    attention.
-                </p>
-            </div>
