@@ -20,12 +20,26 @@ function Header() {
       <NavItems
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        navClass=""
-        container={`py-8 md:hidden bg-[hsl(0,100%,100%)] flex flex-col items-center gap-4 transition-all duration-300 ease-in-out absolute left-8 right-8 ${
+        style={{
+          clipPath: ` 
+            polygon(
+              90% 14%, 
+              100% 0, 
+              100% 100%, 
+              0 100%, 
+              0 14%)
+          `
+        }}
+        container={`pt-16 pb-8 md:hidden bg-[hsl(0,100%,100%)] flex flex-col items-center gap-4 transition-all duration-300 ease-in-out absolute left-8 right-8 z-50 ${
           isOpen ? "opacity-100 translate-y-2" : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
         listClass="flex flex-col gap-4 text-center"
-        buttonClass="bg-[hsl(51,100%,49%)] text-[hsl(212,27%,19%)] py-2 px-4 rounded-3xl cursor-pointer"
+        itemClass="text-lg font-['Barlow'] cursor-pointer hover:text-[hsl(51,100%,49%)] relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5
+                   after:bg-[hsl(51,100%,49%)] after:rounded-3xl hover:after:w-full after:transition-all after:duration-300 after:ease-in-out
+                   transition duration-300 ease-in-out" 
+        buttonClass="bg-[hsl(51,100%,49%)] text-[hsl(212,27%,19%)] text-sm font-bold font-['Fraunces'] py-3 px-6 rounded-3xl 
+                     cursor-pointer border border-transparent hover:border-[hsl(51,100%,49%)] hover:bg-[hsl(0,100%,100%)] hover:text-[hsl(51,100%,49%)]
+                     transition-all duration-300 ease-in-out"
       />
 
       {/* DESKTOP NAV */}
