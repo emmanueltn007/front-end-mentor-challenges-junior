@@ -1,11 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavItems from "./header-components/NavItems";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    }
+  }, [isOpen]);
+
   return (
     <header className="flex justify-between items-center relative px-8 md:px-12 pt-12 md:pt-16">
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/40 z-10" onClick={() => setIsOpen(false)}></div>
+      )}
       <div className="text-white">
         <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -30,9 +45,10 @@ function Header() {
               0 14%)
           `
         }}
-        container={`pt-16 pb-8 md:hidden bg-[hsl(0,100%,100%)] flex flex-col items-center gap-4 transition-all duration-300 ease-in-out absolute left-8 right-8 z-50 ${
+        container={`pt-16 pb-8 md:hidden bg-[hsl(0,100%,100%)] flex flex-col items-center gap-4 transition-all duration-300 ease-in-out absolute left-8 right-8 ${
           isOpen ? "opacity-100 translate-y-2" : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
+        navClass="z-50"
         listClass="flex flex-col gap-4 text-center"
         itemClass="text-lg font-['Barlow'] cursor-pointer hover:text-[hsl(51,100%,49%)] relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5
                    after:bg-[hsl(51,100%,49%)] after:rounded-3xl hover:after:w-full after:transition-all after:duration-300 after:ease-in-out
