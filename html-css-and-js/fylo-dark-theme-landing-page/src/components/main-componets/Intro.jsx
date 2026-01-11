@@ -5,7 +5,7 @@ function Intro () {
                 <img src="/images/illustration-intro.png" alt="illustration intro" />
             </div>
             <div className="text-[hsl(0,0%,100%)] text-center flex flex-col items-center gap-8">
-                <h1 className="text-4xl md:text-3xl font-semibold">
+                <h1 className="text-5xl md:text-4xl font-semibold">
                     All your files in one secure location, accessible anywhere.
                 </h1>
                 <p className="text-xl md:text-md">
