@@ -8,7 +8,7 @@ function Testimonials() {
             >
                 Client Testimonials
             </h4>
-            <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-4">
+            <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-8">
                 {clients.map((client) => {
                     return (
                         <div 
