@@ -3,9 +3,9 @@ import items from "../utilities/navItems";
 function Header () {
     return (
         <header className="flex items-center justify-between p-8">
-           <img className="md:h-8" src="/images/logo.svg" alt="fylo logo" />
+           <img className="h-10 md:h-8" src="/images/logo.svg" alt="fylo logo" />
            <nav>
-                <ul className="flex gap-4 text-gray-300 max-md:text-lg">
+                <ul className="flex gap-4 text-gray-300 text-lg md:text-md">
                     {items.map((item, index) => {
                         return (
                             <li 
