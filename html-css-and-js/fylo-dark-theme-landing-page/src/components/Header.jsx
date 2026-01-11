@@ -2,7 +2,7 @@ import items from "../utilities/navItems";
 
 function Header () {
     return (
-        <header className="flex items-center justify-between p-8">
+        <header className="flex items-center justify-between py-8 px-8 md:px-12 md:py-16">
            <img className="h-10 md:h-8" src="/images/logo.svg" alt="fylo logo" />
            <nav>
                 <ul className="flex gap-4 text-gray-300 text-lg md:text-md">
