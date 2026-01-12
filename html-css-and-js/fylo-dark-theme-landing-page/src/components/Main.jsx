@@ -6,7 +6,7 @@ import Testimonials from "./main-componets/Testimonials";
 
 function Main () {
     return (
-        <main className="flex flex-col gap-16">
+        <main className="flex flex-col gap-24 relative">
             <Intro />
             <Services />
             <StayProductive />

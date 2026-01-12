@@ -8,7 +8,7 @@ function Footer() {
                       "hover:text-[hsl(0,0%,100%)] transition duration-300 ease-in-out";
 
   return (
-    <footer className="flex flex-col gap-8 py-8 px-8 md:px-12 md:py-16 text-xl md:text-md">
+    <footer className="bg-[hsl(216,53%,9%)] flex flex-col gap-8 pb-8 pt-64 px-8 md:px-12 md:pb-16 md:pt-48 text-xl md:text-md mt-64 md:mt-48">
       <img className="w-64 md:w-32" src="/images/logo.svg" alt="Fylo logo" />
       <div className="text-gray-300 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col md:flex-row gap-8">
