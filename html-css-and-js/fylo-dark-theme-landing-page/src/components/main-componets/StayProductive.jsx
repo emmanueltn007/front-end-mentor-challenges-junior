@@ -28,20 +28,20 @@ function StayProductive() {
           <span>See how Fylo works</span>
           <svg
             className="h-5 w-auto"
+            viewBox="0 0 16 16"
             width="16"
             height="16"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
             <defs>
-              <circle id="b" cx="6" cy="6" r="6" />
+              <circle id="arrowCircle" cx="6" cy="6" r="6" />
               <filter
                 x="-25%"
                 y="-25%"
                 width="150%"
                 height="150%"
                 filterUnits="objectBoundingBox"
-                id="a"
+                id="arrowShadow"
               >
                 <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
                 <feGaussianBlur
@@ -57,12 +57,12 @@ function StayProductive() {
             </defs>
             <g fill="currentColor" fillRule="evenodd">
               <g transform="translate(2 2)">
-                <use fill="currentColor" filter="url(#a)" xlink:href="#b" />
-                <use fill="currentColor" xlink:href="#b" />
+                <use fill="currentColor" filter="url(#arrowShadow)" href="#arrowCircle" />
+                <use fill="currentColor" href="#b" />
               </g>
               <path
                 d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
-                fill="#1B2330"
+                fill="black"
               />
             </g>
           </svg>

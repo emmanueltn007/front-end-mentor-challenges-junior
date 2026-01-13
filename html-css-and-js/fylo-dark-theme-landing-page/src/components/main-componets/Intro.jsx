@@ -12,8 +12,9 @@ function Intro () {
                     Fylo stores all your most important files in one secure location. Access them wherever you need,
                     share and collaborate with friends, family, and co-workers.
                 </p>
-                <button className="bg-[linear-gradient(90deg,hsl(176,68%,64%),hsl(198,60%,50%))] text-xl font-semibold md:text-md py-3 
-                                   max-md:w-[80%] md:px-16 rounded-4xl hover:bg-[(hsl(176,68%,64%))] cursor-pointer">
+                <button className="bg-[hsl(198,60%,50%)] text-xl font-semibold md:text-md py-3 
+                                   max-md:w-[80%] md:px-16 rounded-4xl hover:bg-[hsl(176,68%,64%)] cursor-pointer transition 
+                                   duration-300 ease-in-out">
                     Get Started
                 </button>
             </div>

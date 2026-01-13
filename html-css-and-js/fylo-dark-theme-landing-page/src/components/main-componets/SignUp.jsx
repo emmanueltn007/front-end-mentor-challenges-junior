@@ -35,13 +35,13 @@ function SignUp() {
         generous. If you have any questions, our support team would be happy to
         help you.
       </p>
-      <form className="flex flex-col md:flex-row gap-8" onClick={handleSubmit}>
+      <form className="flex flex-col md:flex-row gap-8" onSubmit={handleSubmit}>
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="text"
           placeholder="email@example.com"
-          className="outline-none bg-[hsl(0,0%,100%)] text-gray-500 rounded-4xl md:rounded-5xl px-8 py-4 md:py-2 md:w-full relative"
+          className="outline-none bg-[hsl(0,0%,100%)] text-gray-500 rounded-4xl md:rounded-5xl px-8 py-2 md:w-full relative"
         />
         {error && (
           <p className="absolute bottom-4 left-24 text-[hsl(0,100%,63%)] text-xs font-semibold">{error}</p>
@@ -52,7 +52,8 @@ function SignUp() {
         
         <button 
             type="submit"
-            className="px-8 py-4 md:py-2 bg-[linear-gradient(90deg,hsl(176,68%,64%),hsl(198,60%,50%))] rounded-4xl font-bold cursor-pointer"
+            className="px-8 py-2 bg-[hsl(198,60%,50%)] rounded-4xl font-bold cursor-pointer
+                        hover:bg-[hsl(176,68%,64%)] transition duration-300 ease-in-out"
         >
           Get Started For Free
         </button>
