@@ -44,10 +44,10 @@ function SignUp() {
           className="outline-none bg-[hsl(0,0%,100%)] text-gray-500 rounded-4xl md:rounded-5xl px-8 py-2 md:w-full relative"
         />
         {error && (
-          <p className="absolute bottom-4 left-24 text-[hsl(0,100%,63%)] text-xs font-semibold">{error}</p>
+          <p className="absolute bottom-24 max-md:translate-y-full md:bottom-4 left-24 text-[hsl(0,100%,63%)] text-xs font-semibold">{error}</p>
         )}
         {success && (
-          <p className="absolute bottom-4 left-24 text-[hsl(107,100%,63%)] text-xs font-semibold">{success}</p>
+          <p className="absolute bottom-24 max-md:translate-y-full md:bottom-4 left-24 text-[hsl(107,100%,63%)] text-xs font-semibold">{success}</p>
         )}
         
         <button 
