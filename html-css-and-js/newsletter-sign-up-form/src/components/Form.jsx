@@ -2,7 +2,7 @@ import items from "../utilities/listItems";
 
 function Form () {
   return (
-    <div className="text-[hsl(235,18%,26%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-4 md:justify-center">
+    <div className="text-[hsl(235,18%,26%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-4 md:justify-center md:px-8">
       <h1 className="text-3xl font-bold">
         Stay updated!
       </h1>
@@ -24,12 +24,12 @@ function Form () {
       <form className="flex flex-col">
         <label 
           htmlFor="email-input"
-          className="font-semibold"
+          className="font-semibold text-xs"
         >
           Email address
         </label>
         <input 
-          className="border border-[hsl(0,0%,58%)] rounded-md py-2 px-4 mt-2"
+          className="border border-[hsl(0,0%,58%)] rounded-md py-2 px-4 mt-1"
           type="email" 
           id="email-input" 
           placeholder="email@company.com"
