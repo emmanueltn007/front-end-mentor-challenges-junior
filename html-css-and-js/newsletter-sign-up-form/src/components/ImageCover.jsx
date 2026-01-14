@@ -1,9 +1,13 @@
+import images from "../utilities/IllustrationImages";
+
 function ImageCover () {
   return (
-    <div className="md:col-start-2">
-      <img className="block md:hidden w-full" src="/assets/images/illustration-sign-up-mobile.svg" alt="illustration cover image" />
-      <img className="hidden md:block lg:hidden" src="/assets/images/illustration-sign-up-tablet.svg" alt="illustration cover image" />
-      <img className="hidden lg:block" src="/assets/images/illustration-sign-up-desktop.svg" alt="illustration cover image" />
+    <div className="h-full overflow-hidden md:col-start-2 rounded-b-3xl md:rounded-xl">
+      {images.map(({ image, style }) => {
+        return (
+          <img key={image} src={image} className={style} alt="illustration cover image" />
+        );
+      })}
     </div>
   );
 }
