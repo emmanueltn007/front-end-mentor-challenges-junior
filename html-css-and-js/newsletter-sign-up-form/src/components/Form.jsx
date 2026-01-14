@@ -1,8 +1,25 @@
+import { useState } from "react";
 import items from "../utilities/listItems";
 
 function Form () {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  function handleSubmit (e) {
+    e.preventDefault();
+
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!validEmail.test(email)) {
+      setError("Valid email required");
+    }
+    else {
+      setEmail("");
+      setError("");
+    }
+  }
   return (
-    <div className="text-[hsl(235,18%,26%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-4 md:justify-center md:px-8">
+    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-4 md:justify-center md:px-8">
       <h1 className="text-3xl font-bold">
         Stay updated!
       </h1>
@@ -21,18 +38,28 @@ function Form () {
           );
         })}
       </ul>
-      <form className="flex flex-col">
+      <form noValidate className="flex flex-col relative" onSubmit={handleSubmit}>
         <label 
           htmlFor="email-input"
           className="font-semibold text-xs"
         >
           Email address
         </label>
+        {error && (
+          <p className="absolute text-xs right-0 font-bold text-[hsl(4,100%,67%)]" >{error}</p>
+        )}
         <input 
           className="border border-[hsl(0,0%,58%)] rounded-md py-2 px-4 mt-1"
+          style={{
+            color: error ? "hsl(4,100%,67%)" : "",
+            borderColor: error ? "hsl(4,100%,67%)" : "",
+            backgroundColor: error ? "hsl(4,100%,95%)" : ""
+          }}
           type="email" 
           id="email-input" 
           placeholder="email@company.com"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
         <button
           type="submit"
