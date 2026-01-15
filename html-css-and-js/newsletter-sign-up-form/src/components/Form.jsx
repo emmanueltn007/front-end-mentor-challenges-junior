@@ -29,14 +29,14 @@ function Form () {
     }
   }
   return (
-    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-4 md:justify-center md:px-8">
-      <h1 className="text-3xl font-bold">
+    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-8 justify-between md:justify-center md:px-8">
+      <h1 className="text-4xl font-bold">
         Stay updated!
       </h1>
       <p className="">
         Join 60,000+ product managers receiving monthly updates on:
       </p>
-      <ul>
+      <ul className="flex flex-col gap-4">
         {items.map((item) => {
           return (
             <li 

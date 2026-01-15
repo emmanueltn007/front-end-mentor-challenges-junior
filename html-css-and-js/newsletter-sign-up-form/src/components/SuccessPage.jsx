@@ -4,7 +4,7 @@ function SuccessPage ({ email }) {
   const prevPage = useNavigate();
 
   return (
-    <section className="bg-[hsl(0,0%,100%)] md:rounded-2xl flex flex-col md:gap-4 max-md:justify-between pt-24 md:pt-8 p-8 md:w-1/2">
+    <section className="bg-[hsl(0,0%,100%)] md:rounded-2xl flex flex-col gap-16 md:gap-4 pt-24 md:pt-8 p-8 md:w-1/2">
       <div className="flex flex-col gap-4">
         <img className="self-start" src="/assets/images/icon-success.svg" alt="success icon" />
         <h1 className="text-3xl font-bold">Thanks for subscribing!</h1>
