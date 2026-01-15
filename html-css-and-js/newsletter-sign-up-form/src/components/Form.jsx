@@ -31,7 +31,7 @@ function Form () {
     }
   }
   return (
-    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-8 justify-between md:px-8">
+    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-8 justify-between md:px-8 md:py-8">
       <h1 className="text-4xl font-bold">
         Stay updated!
       </h1>
