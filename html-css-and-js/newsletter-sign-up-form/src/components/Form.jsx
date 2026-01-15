@@ -4,6 +4,7 @@ import items from "../utilities/listItems";
 
 function Form () {
   const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
@@ -15,10 +16,12 @@ function Form () {
 
     if (!validEmail.test(email)) {
       setError("Valid email required");
+      setSuccess("");
     }
     else {
       setEmail("");
       setError("");
+      setSuccess("Success redirecting ... 🚀")
 
       setTimeout(() => {
         navigate("/success")
@@ -55,8 +58,11 @@ function Form () {
         {error && (
           <p className="absolute text-xs right-0 font-bold text-[hsl(4,100%,67%)]" >{error}</p>
         )}
+        {success && (
+          <p className="absolute text-xs right-0 font-bold text-[hsl(119,100%,67%)]" >{success}</p>
+        )}
         <input 
-          className="border border-[hsl(0,0%,58%)] rounded-md py-2 px-4 mt-1"
+          className="border border-[hsl(0,0%,58%)] rounded-md py-2 px-4 mt-1 outline-none"
           style={{
             color: error ? "hsl(4,100%,67%)" : "",
             borderColor: error ? "hsl(4,100%,67%)" : "",
