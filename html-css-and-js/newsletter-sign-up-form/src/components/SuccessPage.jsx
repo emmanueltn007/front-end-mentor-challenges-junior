@@ -1,7 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function SuccessPage ({ email }) {
+
+function SuccessPage () {
   const prevPage = useNavigate();
+  const { state } = useLocation();
 
   return (
     <section className="bg-[hsl(0,0%,100%)] md:rounded-2xl flex flex-col gap-16 md:gap-4 pt-24 md:pt-8 p-8 md:w-1/2">
@@ -9,7 +11,7 @@ function SuccessPage ({ email }) {
         <img className="self-start" src="/assets/images/icon-success.svg" alt="success icon" />
         <h1 className="text-3xl font-bold">Thanks for subscribing!</h1>
         <p>
-          A confirmation email has been sent to {email} Please open it and click the button inside it to
+          A confirmation email has been sent to {""} <span className="font-semibold">{state ?.email}</span>. Please open it and click the button inside it to
           confirm your subscription.
         </p>
       </div>

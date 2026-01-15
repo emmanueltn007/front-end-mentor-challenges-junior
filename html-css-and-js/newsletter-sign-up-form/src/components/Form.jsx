@@ -24,7 +24,9 @@ function Form () {
       setSuccess("Success redirecting ... 🚀")
 
       setTimeout(() => {
-        navigate("/success")
+        navigate("/success", {
+          state: {email}
+        })
       }, 3000)
     }
   }
