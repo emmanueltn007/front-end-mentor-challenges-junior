@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import items from "../utilities/listItems";
 
 function Form () {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   function handleSubmit (e) {
     e.preventDefault();
@@ -16,6 +19,10 @@ function Form () {
     else {
       setEmail("");
       setError("");
+
+      setTimeout(() => {
+        navigate("/success")
+      }, 3000)
     }
   }
   return (
