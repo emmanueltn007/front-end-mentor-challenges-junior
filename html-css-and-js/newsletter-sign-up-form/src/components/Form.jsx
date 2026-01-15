@@ -29,14 +29,14 @@ function Form () {
     }
   }
   return (
-    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-8 justify-between md:justify-center md:px-8">
+    <div className="text-[hsl(235,18%,26%)] text-[hsl(4,100%,85%)] flex flex-col gap-4 md:row-start-1 md:col-start-1 max-md:p-8 justify-between md:px-8">
       <h1 className="text-4xl font-bold">
         Stay updated!
       </h1>
-      <p className="">
+      <p className="text-lg md:text-md lg:text-sm">
         Join 60,000+ product managers receiving monthly updates on:
       </p>
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-4 md:gap-2 text-lg md:text-md lg:text-sm">
         {items.map((item) => {
           return (
             <li 
@@ -48,18 +48,18 @@ function Form () {
           );
         })}
       </ul>
-      <form noValidate className="flex flex-col relative" onSubmit={handleSubmit}>
+      <form noValidate className="flex flex-col relative text-lg md:text-md lg:text-sm" onSubmit={handleSubmit}>
         <label 
           htmlFor="email-input"
-          className="font-semibold text-xs"
+          className="font-semibold text-sm lg:text-xs"
         >
           Email address
         </label>
         {error && (
-          <p className="absolute text-xs right-0 font-bold text-[hsl(4,100%,67%)]" >{error}</p>
+          <p className="absolute text-sm md:text-xs right-0 font-bold text-[hsl(4,100%,67%)]" >{error}</p>
         )}
         {success && (
-          <p className="absolute text-xs right-0 font-bold text-[hsl(119,100%,67%)]" >{success}</p>
+          <p className="absolute text-sm md:text-xs right-0 font-bold text-[hsl(119,100%,67%)]" >{success}</p>
         )}
         <input 
           className="border border-[hsl(0,0%,58%)] rounded-md py-2 px-4 mt-1 outline-none"
@@ -76,7 +76,7 @@ function Form () {
         />
         <button
           type="submit"
-          className="bg-[hsl(235,18%,26%)] text-[hsl(0,0%,100%)] font-semibold p-4 rounded-md cursor-pointer mt-4 hover:bg-[linear-gradient(90deg,hsl(4,100%,67%),hsl(17,100%,66%))] hover:shadow-lg hover:shadow-[hsl(4,100%,67%)] transition-all duration-300 ease-in-out"
+          className="bg-[hsl(235,18%,26%)] text-[hsl(0,0%,100%)] font-semibold p-4 md:p-2 rounded-md cursor-pointer mt-4 hover:bg-[linear-gradient(90deg,hsl(4,100%,67%),hsl(17,100%,66%))] hover:shadow-lg hover:shadow-[hsl(4,100%,67%)] transition-all duration-300 ease-in-out"
         >
           Subscribe to monthly newsletter
         </button>
