@@ -5,7 +5,7 @@ function About () {
         <img className="md:hidden" src="/images/mobile/image-interactive.jpg" alt="about interactive image" />
         <img className="max-md:hidden" src="/images/desktop/image-interactive.jpg" alt="about interactive image" />
       </div>
-      <div className="max-md:text-center flex flex-col gap-4 md:gap-8 md:absolute right-24 md:w-2/5 md:-translate-y-full md:bg-[hsl(0,0%,100%)] md:pt-16 md:pl-16">
+      <div className="max-md:text-center flex flex-col gap-4 md:gap-8 md:absolute md:top:1/2 right-24 md:w-1/3 lg:w-2/5 md:-translate-y-full md:bg-[hsl(0,0%,100%)] md:pt-8 lg:pt-16 md:pl-8 lg:pl-16">
         <h2 className="text-4xl font-light">
           THE LEADER IN INTERACTIVE VR
         </h2>
