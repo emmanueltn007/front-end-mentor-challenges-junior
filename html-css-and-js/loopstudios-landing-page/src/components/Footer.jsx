@@ -7,7 +7,7 @@ function Footer () {
 
   return (
     <footer className="bg-[hsl(0,0%,0%)] text-[hsl(0,0%,100%)] font-semibold text-center flex flex-col md:flex-row items-center md:justify-between md:items-center max-md:gap-8 px-8 md:px-24 py-16 md:py-12">
-      <div className="flex flex-col gap-8 md:gap-4">
+      <div className="flex flex-col gap-8 md:gap-4 md:text-xl">
         <img className="h-8 w-48" src="/images/logo.svg" alt="loopstudios logo" />
         <NavLinks 
           listClass="flex flex-col items-center md:flex-row gap-4" 

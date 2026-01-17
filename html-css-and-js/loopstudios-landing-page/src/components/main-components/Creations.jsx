@@ -4,8 +4,8 @@ function Creations() {
   return (
     <section className="px-8 md:px-24 py-16 md:py-12 flex flex-col gap-16">
       <div className="flex justify-between">
-        <h2 className="text-4xl font-light max-md:mx-auto">OUR CREATIONS</h2>
-        <button className="hidden lg:block border border-[hsl(0,0%,0%)] py-2 px-6 tracking-[0.25rem] cursor-pointer hover:bg-[hsl(0,0%,0%)] hover:text-[hsl(0,0%,100%)] transition-all duration-300 ease-in-out">
+        <h2 className="text-4xl lg:text-6xl font-light max-md:mx-auto">OUR CREATIONS</h2>
+        <button className="hidden text-2xl lg:block border border-[hsl(0,0%,0%)] py-2 px-6 tracking-[0.25rem] cursor-pointer hover:bg-[hsl(0,0%,0%)] hover:text-[hsl(0,0%,100%)] transition-all duration-300 ease-in-out">
           SEE ALL
         </button>
       </div>

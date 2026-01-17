@@ -6,7 +6,7 @@ import Main from "./components/Main";
 function App () {
   return (
     <div className="min-h-screen w-screen">
-      <div className="bg-[url('/images/mobile/image-hero.jpg')] md:bg-[url('/images/desktop/image-hero.jpg')] bg-center bg-no-repeat bg-size-cover">
+      <div className="bg-[url('/images/mobile/image-hero.jpg')] md:bg-[url('/images/desktop/image-hero.jpg')] bg-center bg-no-repeat bg-cover">
         <Header />
         <Hero />
       </div>
