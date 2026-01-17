@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MobileNav from "./header-components/MobileNav";
-import DesktopNav from "./header-components/DesktopNav";
+import MobileNav from "./header-and-footer-components/MobileNav";
+import DesktopNav from "./header-and-footer-components/DesktopNav";
 
 function Header () {
   // useStates for opening and closing mobile nav

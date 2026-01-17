@@ -1,6 +1,6 @@
 import items from "../../utilities/headerItems";
 
-function NavLinks({ listClass, itemsClass, containerClass, isOpen, setIsOpen }) {
+function NavLinks ({ listClass, itemsClass, containerClass, isOpen, setIsOpen }) {
 
   // When clicking on the close icon the mobile nav will close
   const handleCloseMenu = () => setIsOpen(false);
@@ -20,10 +20,10 @@ function NavLinks({ listClass, itemsClass, containerClass, isOpen, setIsOpen }) 
 
       {/* Mapping through the list to use for both the desktop and mobile nav */}
       <ul className={listClass}>
-        {items.map((items) => {
+        {items.map((item) => {
           return (
-            <li className={itemsClass} key={items}>
-              {items}
+            <li className={itemsClass} key={item}>
+              <a href="#">{item}</a>
             </li>
           );
         })}

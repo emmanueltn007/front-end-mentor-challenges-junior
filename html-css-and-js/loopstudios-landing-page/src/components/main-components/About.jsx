@@ -1,6 +1,6 @@
 function About () {
   return (
-    <section className="px-8 md:px-24 py-32 md:py-12 max-md:flex max-md:flex-col max-md:gap-16 relative">
+    <section className="px-8 md:px-24 pt-32 pb-12 md:py-12 max-md:flex max-md:flex-col max-md:gap-16 relative">
       <div className="">
         <img className="md:hidden" src="/images/mobile/image-interactive.jpg" alt="about interactive image" />
         <img className="max-md:hidden" src="/images/desktop/image-interactive.jpg" alt="about interactive image" />
