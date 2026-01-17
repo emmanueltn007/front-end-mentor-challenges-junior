@@ -12,8 +12,8 @@ function Creations() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {gridItems.map(({ title, mobile_bg, desktop_bg }) => {
           return (
-            <div key={title} className="relative cursor-pointer hover:opacity-50 hover:text-[hsl(0,0%,100%)] transition-all duration-300 ease-in-out">
-              <h3 className="absolute uppercase bottom-8 left-8 md:right-16 z-50 text-[hsl(0,0%,85%)] text-3xl md:text-2xl lg:text-3xl font-light">
+            <div key={title} className="group relative cursor-pointer hover:opacity-50 transition-all duration-300 ease-in-out">
+              <h3 className="absolute uppercase bottom-8 left-8 md:right-16 z-50 text-[hsl(0,0%,85%)] text-3xl md:text-2xl lg:text-3xl font-light group-hover:text-[hsl(0,0%,0%)] transition-colors duration-300">
                 {title}
               </h3>
               <img className="lg:hidden z-10" src={mobile_bg} alt="grid item" />
