@@ -6,7 +6,7 @@ function Intro () {
                 <img className="max-md:hidden object-cover lg:absolute lg:right-32 lg:-translate-y-1/4 lg:top-2/5 lg:w-2/5" src="/images/image-intro-desktop.jpg" alt="intro image" />
             </div>
             <div className="text-[hsl(0,0%,98%)] max-md:text-center flex flex-col gap-6 justify-center max-md:px-8 md:row-start-1">
-                <h1 className="text-5xl">
+                <h1 className="text-5xl font-bold">
                     Humanizing your insurance.
                 </h1>
                 <p>
