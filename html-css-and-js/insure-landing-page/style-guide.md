@@ -13,7 +13,7 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Blue 950: hsl(256, 26%, 20%)
+- Blue 950: hsl(256,26%,20%)
 - Blue 500: hsl(216, 30%, 68%)
 
 ### Neutral
