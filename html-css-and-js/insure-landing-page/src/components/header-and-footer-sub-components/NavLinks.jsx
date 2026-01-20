@@ -6,7 +6,7 @@ function NavLinks({ container, listClass, itemClass, buttonClass }) {
       <ul className={listClass}>
         {links.map((link) => {
           return (
-            <li className={itemClass}>
+            <li key={link} className={itemClass}>
               <a href="#">{link}</a>
             </li>
           );

@@ -17,8 +17,8 @@ function Footer () {
                 <div className="flex gap-4">
                     {socials.map((social) => {
                         return (
-                            <a href="#" className="text-[hsl(273,4%,51%)] hover:text-[hsl(256,26%,20%)] transition duration-300 ease-in-out">
-                                <svg key={social} xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path fill="currentColor" d={social} /></svg>
+                            <a key={social} href="#" className="text-[hsl(273,4%,51%)] hover:text-[hsl(256,26%,20%)] transition duration-300 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path fill="currentColor" d={social} /></svg>
                             </a>
                             
                         );
