@@ -6,7 +6,7 @@ function MobileMenu ({ isOpen, setIsOpen }) {
     const handleMenuToggle = () => setIsOpen(prev => !prev);
 
     return (
-        <nav className="md:hidden">
+        <nav className="md:hidden text-lg">
             <button onClick={handleMenuToggle} className="md:hidden cursor-pointer">
                 <img src={isOpen ? "/images/icon-close.svg" : "/images/icon-hamburger.svg"} alt="menu icons" />
             </button>

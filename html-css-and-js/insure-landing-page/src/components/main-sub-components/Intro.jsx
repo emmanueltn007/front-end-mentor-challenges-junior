@@ -9,12 +9,12 @@ function Intro () {
                 <h1 className="text-5xl font-bold">
                     Humanizing your insurance.
                 </h1>
-                <p>
+                <p className="text-lg md:text-md lg:text-sm">
                     Get your life insurance coverage easier and faster. 
                     We blend our expertise and technology to help you find the plan that's right for you.
                     Ensure you and your loved ones are protected.
                 </p>
-                <button className="border-2 border-[hsl(0,0%,98%)] font-semibold py-2 px-6 self-start max-md:mx-auto cursor-pointer hover:bg-[hsl(0,0%,98%)] hover:text-[hsl(256,26%,20%)] transition-all duration-300 ease-in-out">
+                <button className="text-lg md:text-md lg:text-sm border-2 border-[hsl(0,0%,98%)] font-semibold py-2 px-6 self-start max-md:mx-auto cursor-pointer hover:bg-[hsl(0,0%,98%)] hover:text-[hsl(256,26%,20%)] transition-all duration-300 ease-in-out">
                     VIEW PLANS
                 </button>
             </div>

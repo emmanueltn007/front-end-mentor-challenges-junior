@@ -10,7 +10,7 @@ function Benefits () {
                         <div className="flex flex-col gap-4" key={title}>
                             <img className="self-start max-md:mx-auto mb-4" src={icon} alt="benefits icons" />
                             <h2 className="font-semibold text-xl">{title}</h2>
-                            <p className="text-[hsl(273,4%,51%)]">{description}</p>
+                            <p className="text-[hsl(273,4%,51%)] text-lg md:text-md lg:text-sm">{description}</p>
                         </div>
                     );
                 })}

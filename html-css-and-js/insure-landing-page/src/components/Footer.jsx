@@ -26,7 +26,7 @@ function Footer () {
                 </div>
             </div>
             <hr className="text-[hsl(273,4%,51%)]" />
-            <div className="md:grid md:grid-cols-4 max-md:text-center flex flex-col items-center max-md:gap-8">
+            <div className="md:flex-row md:justify-between max-md:text-center text-lg md:text-md lg:text-sm flex flex-col max-md:items-center max-md:gap-8">
                 <div className={containerStyle}>
                     <h3 className={titleStyle}>OUR COMPANY</h3>
                     <ul className={listContainerStyle}>
