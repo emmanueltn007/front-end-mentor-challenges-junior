@@ -42,7 +42,22 @@ function App() {
       return;
     }
 
+    const mortgageTermCalculation = mortgageTermInput * 12;
+    const interestRateCalculation  = interestRateInput / 12;
 
+    const monthlyRepaymentPart1 = mortgageAmountInput * interestRateCalculation;
+    const monthlyRepaymenPart2 = ((1 + interestRateCalculation) ** mortgageTermCalculation);
+    const monthlyRepaymenPart3 = (1 + interestRateCalculation) ** (mortgageTermCalculation -1);
+
+    const monthlyRepayment = monthlyRepaymentPart1 * (monthlyRepaymenPart2 / monthlyRepaymenPart3);
+
+    const totalRepayment = monthlyRepayment * mortgageTermCalculation;
+
+  
+    console.log(mortgageTermCalculation);
+    console.log(interestRateCalculation);
+    console.log(monthlyRepayment);
+    console.log(totalRepayment);
   }
 
   return ( 

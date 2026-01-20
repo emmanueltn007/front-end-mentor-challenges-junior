@@ -33,7 +33,7 @@ function LeftSide({
             value={mortgageAmount}
             type="number"
             id="mortgage-amount"
-            className="border border-[hsl(200,24%,40%)] py-2 outline-none rounded-md"
+            className="border border-[hsl(200,24%,40%)] hover:border-[hsl(202,55%,16%)] py-2 outline-none rounded-md"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -77,7 +77,7 @@ function LeftSide({
               type="radio"
               name="mortgage-type"
               id="repayment"
-              value="rapayment"
+              value="repayment"
             />
             <label htmlFor="repayment" className="text-[hsl(202,55%,16%)] font-semibold">Repayment</label>
           </div>
