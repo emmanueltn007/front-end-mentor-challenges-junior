@@ -11,7 +11,7 @@ function App () {
     }
 
     return (
-        <div className="p-4">
+        <div className="px-4 py-4 md:px-24 md:py-8">
             <Header isDark={isDark} handleDarkModeToggle={handleDarkModeToggle} />
             <Main />
         </div>
