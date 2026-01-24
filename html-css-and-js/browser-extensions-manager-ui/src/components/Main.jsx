@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import Tabs from "./Tabs";
 
 function Main({ isDark }) {
+
   // useStates
   const [extensionList, setExtensionList] = useState([]);
-  const [isActive, setIsActive] = useState(false);
+  const [active, setActive] = useState([]);
 
+  // This code fetches data from a json file
   useEffect(() => {
     axios.get("../../data.json").then((response) => {
       setExtensionList(response.data);
@@ -55,8 +57,8 @@ function Main({ isDark }) {
                 <button className="bg-[hsl(200,60%,99%)] border-2 border-[hsl(0,0%,78%)] rounded-3xl py-1 px-4">
                   Remove
                 </button>
-                <button className="cursor-pointer w-24" onClick={() => setIsActive(prev => !prev)}>
-                  {isActive ? (
+                <button className="cursor-pointer w-24" onClick={() => setActive(prev => !prev)}>
+                  {active ? (
                     <svg
                       className="h-4 w-24 text-[hsl(0,0%,78%)]"
                       xmlns="http://www.w3.org/2000/svg"
