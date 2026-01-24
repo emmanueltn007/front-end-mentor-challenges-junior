@@ -8,13 +8,11 @@ function App () {
     const [isDark, setIsDark] = useState(false);
 
     // function to handle dark and light mode toggle
-    function handleDarkModeToggle () {
-        setIsDark(prev => !prev)
-    }
-
+    const toggleDarkMode = () => setIsDark(d => !d);
+ 
     return (
         <div className="flex flex-col gap-8 md:gap-12 px-4 py-4 md:px-24 md:py-8">
-            <Header isDark={isDark} handleDarkModeToggle={handleDarkModeToggle} />
+            <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
             <Main isDark={isDark} />
         </div>
     );

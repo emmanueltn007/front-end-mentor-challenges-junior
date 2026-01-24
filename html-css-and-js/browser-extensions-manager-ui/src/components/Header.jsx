@@ -1,4 +1,4 @@
-function Header({ isDark, handleDarkModeToggle }) {
+function Header({ isDark, toggleDarkMode }) {
   return (
     <header
       className={`flex items-center justify-between p-4 rounded-md shadow-sm shadow-[hsl(226,11%,37%)] transition-all duration-300 ${isDark ? "bg-[hsl(225,23%,24%)]" : "bg-[hsl(0,0%,100%)]"}`}
@@ -33,7 +33,7 @@ function Header({ isDark, handleDarkModeToggle }) {
 
       {/* Button to toggle between light and dark mode */}
       <button
-        onClick={handleDarkModeToggle}
+        onClick={toggleDarkMode}
         className={`p-2 rounded-md cursor-pointer ${isDark ? "bg-[hsl(226,11%,37%)]" : "bg-[hsl(0,0%,78%)]"}`}
       >
         <img
