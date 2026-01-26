@@ -19,6 +19,8 @@ function Form ({ errors, date, setDate, calculateAge }) {
               <input
                 className={`text-xl font-bold border focus:border-[hsl(259,100%,65%)] caret-[hsl(259,100%,65%)] p-4 rounded-md outline-none ${errors.day ? "border-[hsl(0,100%,67%)]" : "hsl(0,100%,67%)"}`}
                 type="number"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 min="1"
                 max="31"
                 id="day-input"
@@ -42,6 +44,8 @@ function Form ({ errors, date, setDate, calculateAge }) {
               <input
                 className={`text-xl font-bold border focus:border-[hsl(259,100%,65%)] caret-[hsl(259,100%,65%)] p-4 rounded-md outline-none ${errors.month ? "border-[hsl(0,100%,67%)]" : "hsl(0,100%,67%)"}`}
                 type="number"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 min="1"
                 max="12"
                 id="month-input"
@@ -65,6 +69,8 @@ function Form ({ errors, date, setDate, calculateAge }) {
               <input
                 className={`text-xl font-bold border focus:border-[hsl(259,100%,65%)] caret-[hsl(259,100%,65%)] p-4 rounded-md outline-none ${errors.year ? "border-[hsl(0,100%,67%)]" : "hsl(0,100%,67%)"}`}
                 type="number"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 min="1"
                 id="year-input"
                 placeholder="YYYY"
