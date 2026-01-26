@@ -17,7 +17,7 @@ function Form ({ errors, date, setDate, calculateAge }) {
                 DAY
               </label>
               <input
-                className="text-xl font-bold border border-[hsl(0,1%,44%)] p-4 rounded-md outline-none"
+                className={`text-xl font-bold border focus:border-[hsl(259,100%,65%)] caret-[hsl(259,100%,65%)] p-4 rounded-md outline-none ${errors.day ? "border-[hsl(0,100%,67%)]" : "hsl(0,100%,67%)"}`}
                 type="number"
                 min="1"
                 max="31"
@@ -40,7 +40,7 @@ function Form ({ errors, date, setDate, calculateAge }) {
                 MONTH
               </label>
               <input
-                className="text-xl font-bold border border-[hsl(0,1%,44%)] p-4 rounded-md outline-none"
+                className={`text-xl font-bold border focus:border-[hsl(259,100%,65%)] caret-[hsl(259,100%,65%)] p-4 rounded-md outline-none ${errors.month ? "border-[hsl(0,100%,67%)]" : "hsl(0,100%,67%)"}`}
                 type="number"
                 min="1"
                 max="12"
@@ -63,7 +63,7 @@ function Form ({ errors, date, setDate, calculateAge }) {
                 YEAR
               </label>
               <input
-                className="text-xl font-bold border border-[hsl(0,1%,44%)] p-4 rounded-md outline-none"
+                className={`text-xl font-bold border focus:border-[hsl(259,100%,65%)] caret-[hsl(259,100%,65%)] p-4 rounded-md outline-none ${errors.year ? "border-[hsl(0,100%,67%)]" : "hsl(0,100%,67%)"}`}
                 type="number"
                 min="1"
                 id="year-input"
@@ -85,11 +85,7 @@ function Form ({ errors, date, setDate, calculateAge }) {
               type="submit"
               className="cursor-pointer absolute -translate-y-1/2 max-md:left-1/2 md:right-8 md:translate-x-full -translate-x-1/2 rounded-full overflow-hidden"
             >
-              <img
-                src="/assets/images/icon-arrow.svg"
-                alt="arrow icon"
-                className="bg-[hsl(259,100%,65%)] p-2"
-              />
+              <svg className="bg-[hsl(259,100%,65%)] text-[hsl(259,100%,65%)] hover:text-black hover:bg-black transition-all duration-300 ease-in-out p-2" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="currentColor" stroke="#FFF" strokeWidth="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" fill="currentColor"/></g></svg>
             </button>
           </div>
         </form>

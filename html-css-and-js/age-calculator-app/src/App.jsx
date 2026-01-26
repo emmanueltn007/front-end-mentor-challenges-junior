@@ -22,11 +22,11 @@ function App() {
 
     // MONTH
     if (!month) newErrors.month = "This field is required";
-    else if (month < 1 || month > 12) newErrors.month = "invalid month";
+    else if (month < 1 || month > 12) newErrors.month = "Must be a valid month";
 
     // DAY
     if (!day) newErrors.day = "This field is required";
-    else if (day < 1 || day > 31) newErrors.day = "Invalid day";
+    else if (day < 1 || day > 31) newErrors.day = "Must be a valid day";
 
     setErrors(newErrors);
 
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className="h-screen bg-[hsl(0,0%,86%)] flex items-center justify-center">
-      <div className="flex flex-col gap-8 bg-[hsl(0,0%,100%)] px-8 py-16 md:py-8 w-4/5 md:w-3/5 lg:w-2/5 mx-auto rounded-br-[128px] rounded-bl-4xl rounded-t-4xl">
+      <div className="flex flex-col gap-8 bg-[hsl(0,0%,100%)] px-8 py-16 md:py-8 w-4/5 md:w-3/5 lg:w-2/5 mx-auto rounded-br-[128px] rounded-bl-4xl rounded-t-4xl shadow-lg shadow-gray-500">
         
         <Form date={date} setDate={setDate} errors={errors} calculateAge={calculateAge} />
 
