@@ -10,7 +10,10 @@ function App() {
     mortgageTerm, 
     setMortgageTerm,
     interestRate,
-    setInterestRate
+    setInterestRate,
+    mortgageAmountError,
+    mortgageTermError,
+    interestRateError
   } = useForm();
  
 
@@ -25,6 +28,9 @@ function App() {
           setMortgageTerm={setMortgageTerm}
           interestRate={interestRate}
           setInterestRate={setInterestRate}
+          mortgageAmountError={mortgageAmountError}
+          mortgageTermError={mortgageTermError}
+          interestRateError={interestRateError}
         />
         <RightSide />
       </div>

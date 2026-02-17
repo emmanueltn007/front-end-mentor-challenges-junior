@@ -5,21 +5,58 @@ export function useForm () {
     const [mortgageAmount, setMortgageAmount] = useState("");
     const [mortgageTerm, setMortgageTerm] = useState("");
     const [interestRate, setInterestRate] = useState("");
-
-    const P = Number(mortgageAmount);
-    const n = Number(mortgageTerm);
-    const i = (Number(interestRate) / 100) / 12;
+    const [mortgageAmountError, setMortgageAmountError] = useState("");
+    const [mortgageTermError, setMortgageTermError] = useState("");
+    const [interestRateError, setInterestRateError] = useState("");
 
     const handleCalculations = (e) => {
         e.preventDefault();
-        console.log(`Mortgage Amount is $${P}`);
-        console.log(`Mortgage Term is ${n} years`);
-        console.log(`The interest rate is ${i}% per annum`);
+
+        const P = Number(mortgageAmount);
+        const n = Number(mortgageTerm) * 12;
+        const i = (Number(interestRate) / 100) / 12;
+
+        // Mortgage amount validation
+        if (!P) {
+            setMortgageAmountError("This field is required");
+            return;
+        } else {
+            setMortgageAmountError("");
+        }
+        
+        // Mortgage term validation
+        if (!n) {
+            setMortgageTermError("This field is required");
+            return;
+        } else {
+            setMortgageTermError("");
+        }
+
+        // Interest rate validation
+        if (!n) {
+            setInterestRateError("This field is required");
+            return;
+        } else {
+            setInterestRateError("");
+        }
+
+        const totalRepayment1 = P * (i * (1 + i) ** n);
+        const totalRepayment2 = ((1 + i) ** n) -1;
+        const totalRepayment = totalRepayment1 / totalRepayment2;
+        const monthlyRepayment = totalRepayment / n;
 
         setTimeout(() => {
             console.log("Form is submitted!");
         }, 2000);
+
+        console.log(`Total amount to be repaid is: ${totalRepayment}`);
+        console.log(`Monthly repayments equal to: ${monthlyRepayment}`);
+
+        console.log(`Mortgage Amount is $${P}`);
+        console.log(`Mortgage Term is ${n} years`);
+        console.log(`The interest rate is ${i}% per annum`);
     }
+
     return {
         handleCalculations,
         mortgageAmount,
@@ -27,6 +64,9 @@ export function useForm () {
         mortgageTerm,
         setMortgageTerm,
         interestRate,
-        setInterestRate
+        setInterestRate,
+        mortgageAmountError,
+        mortgageTermError,
+        interestRateError
     };
 }

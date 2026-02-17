@@ -8,7 +8,10 @@ function LeftSide({
   mortgageTerm, 
   setMortgageTerm,
   interestRate,
-  setInterestRate
+  setInterestRate,
+  mortgageAmountError,
+  mortgageTermError,
+  interestRateError
  }) {
 
   return (
@@ -29,6 +32,9 @@ function LeftSide({
         setMortgageTerm={setMortgageTerm}
         interestRate={interestRate}
         setInterestRate={setInterestRate}
+        mortgageAmountError={mortgageAmountError}
+        mortgageTermError={mortgageTermError}
+        interestRateError={interestRateError}
       />
     </div>
   );

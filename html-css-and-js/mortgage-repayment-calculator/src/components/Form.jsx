@@ -5,7 +5,10 @@ function Form ({
   mortgageTerm, 
   setMortgageTerm,
   interestRate,
-  setInterestRate
+  setInterestRate,
+  mortgageAmountError,
+  mortgageTermError,
+  interestRateError
 }) {
     return (
         <form noValidate onSubmit={(e) => handleCalculations(e)} className="flex flex-col gap-4">
@@ -23,6 +26,9 @@ function Form ({
             onChange={(e) => setMortgageAmount(e.target.value)}
             className="border border-[hsl(200,24%,40%)] hover:border-[hsl(202,55%,16%)] py-2 outline-none rounded-md"
           />
+          {mortgageAmountError && (
+            <p>{mortgageAmountError}</p>
+          )}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
@@ -39,6 +45,9 @@ function Form ({
               onChange={(e) => setMortgageTerm(e.target.value)}
               className="border border-[hsl(200,24%,40%)] py-2 outline-none rounded-md"
             />
+            {mortgageTermError && (
+            <p>{mortgageAmountError}</p>
+          )}
           </div>
           <div className="flex flex-col gap-2">
             <label
@@ -54,6 +63,9 @@ function Form ({
               onChange={(e) => setInterestRate(e.target.value)}
               className="border border-[hsl(200,24%,40%)] py-2 outline-none rounded-md"
             />
+            {interestRateError && (
+              <p>{interestRateError}</p>
+            )}
           </div>
         </div>
         <div className="flex flex-col gap-2">
