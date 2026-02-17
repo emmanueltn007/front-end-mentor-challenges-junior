@@ -1,7 +1,15 @@
 import Form from "./Form";
 
 
-function LeftSide() {
+function LeftSide({ 
+  handleCalculations, 
+  mortgageAmount, 
+  setMortgageAmount, 
+  mortgageTerm, 
+  setMortgageTerm,
+  interestRate,
+  setInterestRate
+ }) {
 
   return (
     <div className="py-8 px-4">
@@ -13,7 +21,15 @@ function LeftSide() {
           Clear All
         </button>
       </div>
-      <Form />
+      <Form 
+        handleCalculations={handleCalculations} 
+        mortgageAmount={mortgageAmount} 
+        setMortgageAmount={setMortgageAmount} 
+        mortgageTerm={mortgageTerm}
+        setMortgageTerm={setMortgageTerm}
+        interestRate={interestRate}
+        setInterestRate={setInterestRate}
+      />
     </div>
   );
 }

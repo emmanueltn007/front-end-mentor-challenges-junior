@@ -1,6 +1,14 @@
-function Form () {
+function Form ({ 
+  handleCalculations, 
+  mortgageAmount, 
+  setMortgageAmount, 
+  mortgageTerm, 
+  setMortgageTerm,
+  interestRate,
+  setInterestRate
+}) {
     return (
-        <form noValidate className="flex flex-col gap-4">
+        <form noValidate onSubmit={(e) => handleCalculations(e)} className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <label
             htmlFor="mortgage-amount"
@@ -11,6 +19,8 @@ function Form () {
           <input
             type="number"
             id="mortgage-amount"
+            value={mortgageAmount}
+            onChange={(e) => setMortgageAmount(e.target.value)}
             className="border border-[hsl(200,24%,40%)] hover:border-[hsl(202,55%,16%)] py-2 outline-none rounded-md"
           />
         </div>
@@ -25,6 +35,8 @@ function Form () {
             <input
               type="number"
               id="mortgage-term"
+              value={mortgageTerm}
+              onChange={(e) => setMortgageTerm(e.target.value)}
               className="border border-[hsl(200,24%,40%)] py-2 outline-none rounded-md"
             />
           </div>
@@ -38,6 +50,8 @@ function Form () {
             <input
               type="number"
               id="interest-rate"
+              value={interestRate}
+              onChange={(e) => setInterestRate(e.target.value)}
               className="border border-[hsl(200,24%,40%)] py-2 outline-none rounded-md"
             />
           </div>
