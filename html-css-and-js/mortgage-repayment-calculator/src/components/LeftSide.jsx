@@ -11,7 +11,8 @@ function LeftSide({
   setInterestRate,
   mortgageAmountError,
   mortgageTermError,
-  interestRateError
+  interestRateError,
+  clearForm
  }) {
 
   return (
@@ -20,7 +21,7 @@ function LeftSide({
         <h1 className="text-2xl text-[hsl(202,55%,16%)] font-semibold">
           Mortgage Calculator
         </h1>
-        <button className="text-[hsl(200,24%,40%)] w-fit relative after:content-[''] after:absolute after:bottom-0 after:w-full after:h-0.5 after:left-0 after:bg-[hsl(200,24%,40%)]">
+        <button onClick={clearForm} className="text-[hsl(200,24%,40%)] w-fit relative after:content-[''] after:absolute after:bottom-0 after:w-full after:h-0.5 after:left-0 after:bg-[hsl(200,24%,40%)]">
           Clear All
         </button>
       </div>

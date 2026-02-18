@@ -64,6 +64,15 @@ export function useForm () {
         setTotalRepayment(T.toFixed(2));
     }
 
+    const clearForm = () => {
+        setMortgageAmount("");
+        setMortgageTerm("");
+        setInterestRate("");
+        setMonthlyRepayments("");
+        setTotalRepayment("");
+        setResultsContainer(false);
+    }
+
     return {
         handleCalculations,
         mortgageAmount,
@@ -79,6 +88,7 @@ export function useForm () {
         resultsParagraph,
         resultsContainer,
         monthlyRepayments,
-        totalRepayment
+        totalRepayment,
+        clearForm
     };
 }

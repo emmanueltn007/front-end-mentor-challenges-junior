@@ -18,7 +18,8 @@ function App() {
     resultsParagraph,
     resultsContainer,
     monthlyRepayments,
-    totalRepayment
+    totalRepayment,
+    clearForm
   } = useForm();
  
 
@@ -36,6 +37,7 @@ function App() {
           mortgageAmountError={mortgageAmountError}
           mortgageTermError={mortgageTermError}
           interestRateError={interestRateError}
+          clearForm={clearForm}
         />
         <RightSide resultsText={resultsText} resultsParagraph={resultsParagraph} resultsContainer={resultsContainer} monthlyRepayments={monthlyRepayments} totalRepayment={totalRepayment} />
       </div>
