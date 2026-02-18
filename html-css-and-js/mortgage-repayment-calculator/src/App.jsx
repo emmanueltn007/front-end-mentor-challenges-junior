@@ -13,7 +13,12 @@ function App() {
     setInterestRate,
     mortgageAmountError,
     mortgageTermError,
-    interestRateError
+    interestRateError,
+    resultsText,
+    resultsParagraph,
+    resultsContainer,
+    monthlyRepayments,
+    totalRepayment
   } = useForm();
  
 
@@ -32,7 +37,7 @@ function App() {
           mortgageTermError={mortgageTermError}
           interestRateError={interestRateError}
         />
-        <RightSide />
+        <RightSide resultsText={resultsText} resultsParagraph={resultsParagraph} resultsContainer={resultsContainer} monthlyRepayments={monthlyRepayments} totalRepayment={totalRepayment} />
       </div>
     </main>
   );

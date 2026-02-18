@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export function useForm () {
+    const longResultsParagraphText = "Complete the form and click 'Calculate Repayments' to see what your monthly repayments would be."
+
     // useStates
     const [mortgageAmount, setMortgageAmount] = useState("");
     const [mortgageTerm, setMortgageTerm] = useState("");
@@ -8,6 +10,12 @@ export function useForm () {
     const [mortgageAmountError, setMortgageAmountError] = useState("");
     const [mortgageTermError, setMortgageTermError] = useState("");
     const [interestRateError, setInterestRateError] = useState("");
+    const [resultsText, setResultsText] = useState("Results shown here");
+    const [resultsParagraph, setResultsParagraph] = useState(longResultsParagraphText);
+    const [resultsContainer, setResultsContainer] = useState(false);
+    const [monthlyRepayments, setMonthlyRepayments] = useState("");
+    const [totalRepayment, setTotalRepayment] = useState("");
+
 
     const handleCalculations = (e) => {
         e.preventDefault();
@@ -40,21 +48,20 @@ export function useForm () {
             setInterestRateError("");
         }
 
-        const totalRepayment1 = P * (i * (1 + i) ** n);
-        const totalRepayment2 = ((1 + i) ** n) -1;
-        const totalRepayment = totalRepayment1 / totalRepayment2;
-        const monthlyRepayment = totalRepayment / n;
+        const M = P * (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
+
+        const T = M * n;
 
         setTimeout(() => {
             console.log("Form is submitted!");
         }, 2000);
 
-        console.log(`Total amount to be repaid is: ${totalRepayment}`);
-        console.log(`Monthly repayments equal to: ${monthlyRepayment}`);
+        setResultsText("Your Results");
+        setResultsParagraph("Your results are shown below based on the information you provided. To adjust the results, edit the form and click 'Calculate Repayments' again.");
+        setResultsContainer((prev) => !prev);
 
-        console.log(`Mortgage Amount is $${P}`);
-        console.log(`Mortgage Term is ${n} years`);
-        console.log(`The interest rate is ${i}% per annum`);
+        setMonthlyRepayments(M.toFixed(2));
+        setTotalRepayment(T.toFixed(2));
     }
 
     return {
@@ -67,6 +74,11 @@ export function useForm () {
         setInterestRate,
         mortgageAmountError,
         mortgageTermError,
-        interestRateError
+        interestRateError,
+        resultsText,
+        resultsParagraph,
+        resultsContainer,
+        monthlyRepayments,
+        totalRepayment
     };
 }
