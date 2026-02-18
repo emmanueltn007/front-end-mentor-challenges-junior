@@ -8,7 +8,9 @@ function Form ({
   setInterestRate,
   mortgageAmountError,
   mortgageTermError,
-  interestRateError
+  interestRateError,
+  selected,
+  setSelected
 }) {
     return (
         <form noValidate onSubmit={(e) => handleCalculations(e)} className="flex flex-col gap-4">
@@ -76,6 +78,8 @@ function Form ({
             <input
               type="radio"
               name="mortgage-type"
+              onChange={(e) => setSelected(e.target.value)}
+              checked={selected === "repayment"}
               id="repayment"
               value="repayment"
             />
@@ -85,6 +89,8 @@ function Form ({
             <input
               type="radio"
               name="mortgage-type"
+              onChange={(e) => setSelected(e.target.value)}
+              checked={selected === "interest-only"}
               id="interest-only"
               value="interest-only"
             />

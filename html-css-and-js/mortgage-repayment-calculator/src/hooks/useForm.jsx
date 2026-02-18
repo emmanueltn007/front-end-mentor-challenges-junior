@@ -15,6 +15,9 @@ export function useForm () {
     const [resultsContainer, setResultsContainer] = useState(false);
     const [monthlyRepayments, setMonthlyRepayments] = useState("");
     const [totalRepayment, setTotalRepayment] = useState("");
+    const [monthlyInterestRate, setMonthlyInterestRate] = useState("");
+    const [totalInterestRate, setTotalInterestRate] = useState("");
+    const [selected, setSelected] = useState("");
 
 
     const handleCalculations = (e) => {
@@ -48,20 +51,31 @@ export function useForm () {
             setInterestRateError("");
         }
 
+        // Mortgage type selection
+        if(!selected) {
+            return;
+        }
+
         const M = P * (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
 
         const T = M * n;
+        const monthlyInterestRateToBePaid = P * (i / 12)
 
-        setTimeout(() => {
-            console.log("Form is submitted!");
-        }, 2000);
+        const totalInterestToBePaid = M * n - P;
+
+        if(selected === "repayment") {
+            setMonthlyRepayments(M.toFixed(2));
+            setTotalRepayment(T.toFixed(2));
+        } else {
+            setMonthlyInterestRate(monthlyInterestRateToBePaid.toFixed(2));
+            setTotalInterestRate(totalInterestToBePaid.toFixed(2));
+        }
+
+        
 
         setResultsText("Your Results");
         setResultsParagraph("Your results are shown below based on the information you provided. To adjust the results, edit the form and click 'Calculate Repayments' again.");
         setResultsContainer((prev) => !prev);
-
-        setMonthlyRepayments(M.toFixed(2));
-        setTotalRepayment(T.toFixed(2));
     }
 
     const clearForm = () => {
@@ -89,6 +103,10 @@ export function useForm () {
         resultsContainer,
         monthlyRepayments,
         totalRepayment,
-        clearForm
+        monthlyInterestRate,
+        totalInterestRate,
+        clearForm,
+        selected,
+        setSelected
     };
 }

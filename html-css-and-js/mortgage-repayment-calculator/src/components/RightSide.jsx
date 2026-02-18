@@ -1,4 +1,4 @@
-function RightSide ({ resultsText, resultsParagraph, resultsContainer, monthlyRepayments, totalRepayment }) {
+function RightSide ({ resultsText, resultsParagraph, resultsContainer, monthlyRepayments, totalRepayment, monthlyInterestRate, totalInterestRate, selected }) {
     return (
         <div className="bg-[hsl(202,55%,16%)] md:rounded-bl-[64px] py-8 px-4 text-center flex flex-col items-center">
             <img src="/assets/images/illustration-empty.svg" alt="illustration image" />
@@ -15,12 +15,12 @@ function RightSide ({ resultsText, resultsParagraph, resultsContainer, monthlyRe
                         <span 
                             className="text-[hsl(203,41%,72%)]"
                         >
-                            Your monthly repayments
+                            {selected === "repayment" ? "Your monthly repayments" : "Your monthly interest rate repayment"}
                         </span>
                         <span 
                             className="text-4xl text-[hsl(61,70%,52%)] font-semibold"
                         >
-                            £{monthlyRepayments}
+                            £{selected === "repayment" ? monthlyRepayments :  monthlyInterestRate}
                         </span>
                     </div>
 
@@ -30,12 +30,12 @@ function RightSide ({ resultsText, resultsParagraph, resultsContainer, monthlyRe
                         <span 
                             className="text-[hsl(203,41%,72%)]"
                         >
-                            Total you'll repay over the term
+                            {selected === "repayment" ? "Total you'll repay over the term" : "Total interest you'll repay over the term"} 
                         </span>
                         <span 
                             className="text-[hsl(0,0%,100%)] text-xl font-semibold"
                         >
-                            £{totalRepayment}
+                            £{selected === "repayment" ? totalRepayment : totalInterestRate}
                         </span>
                     </div>
                 </div>

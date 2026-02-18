@@ -12,7 +12,9 @@ function LeftSide({
   mortgageAmountError,
   mortgageTermError,
   interestRateError,
-  clearForm
+  clearForm,
+  selected,
+  setSelected
  }) {
 
   return (
@@ -36,6 +38,8 @@ function LeftSide({
         mortgageAmountError={mortgageAmountError}
         mortgageTermError={mortgageTermError}
         interestRateError={interestRateError}
+        selected={selected}
+        setSelected={setSelected}
       />
     </div>
   );

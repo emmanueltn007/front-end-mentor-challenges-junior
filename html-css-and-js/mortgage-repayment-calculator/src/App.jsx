@@ -19,7 +19,11 @@ function App() {
     resultsContainer,
     monthlyRepayments,
     totalRepayment,
-    clearForm
+    monthlyInterestRate,
+    totalInterestRate,
+    clearForm,
+    selected,
+    setSelected
   } = useForm();
  
 
@@ -38,8 +42,19 @@ function App() {
           mortgageTermError={mortgageTermError}
           interestRateError={interestRateError}
           clearForm={clearForm}
+          selected={selected}
+          setSelected={setSelected}
         />
-        <RightSide resultsText={resultsText} resultsParagraph={resultsParagraph} resultsContainer={resultsContainer} monthlyRepayments={monthlyRepayments} totalRepayment={totalRepayment} />
+        <RightSide 
+          resultsText={resultsText} 
+          resultsParagraph={resultsParagraph} 
+          resultsContainer={resultsContainer} 
+          monthlyRepayments={monthlyRepayments} 
+          totalRepayment={totalRepayment} 
+          monthlyInterestRate={monthlyInterestRate} 
+          totalInterestRate={totalInterestRate}
+          selected={selected} 
+        />
       </div>
     </main>
   );
