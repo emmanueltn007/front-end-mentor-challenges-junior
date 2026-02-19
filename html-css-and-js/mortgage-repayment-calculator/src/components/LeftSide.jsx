@@ -1,21 +1,10 @@
 import Form from "./Form";
+import { useContext } from "react";
+import { FormContext } from "../hooks/FormContext";
 
+function LeftSide() {
 
-function LeftSide({ 
-  handleCalculations, 
-  mortgageAmount, 
-  setMortgageAmount, 
-  mortgageTerm, 
-  setMortgageTerm,
-  interestRate,
-  setInterestRate,
-  mortgageAmountError,
-  mortgageTermError,
-  interestRateError,
-  clearForm,
-  selected,
-  setSelected
- }) {
+  const { clearForm } = useContext(FormContext);
 
   return (
     <div className="py-8 px-4">
@@ -27,20 +16,7 @@ function LeftSide({
           Clear All
         </button>
       </div>
-      <Form 
-        handleCalculations={handleCalculations} 
-        mortgageAmount={mortgageAmount} 
-        setMortgageAmount={setMortgageAmount} 
-        mortgageTerm={mortgageTerm}
-        setMortgageTerm={setMortgageTerm}
-        interestRate={interestRate}
-        setInterestRate={setInterestRate}
-        mortgageAmountError={mortgageAmountError}
-        mortgageTermError={mortgageTermError}
-        interestRateError={interestRateError}
-        selected={selected}
-        setSelected={setSelected}
-      />
+      <Form />
     </div>
   );
 }

@@ -1,4 +1,9 @@
-function RightSide ({ resultsText, resultsParagraph, resultsContainer, monthlyRepayments, totalRepayment, monthlyInterestRate, totalInterestRate, selected }) {
+import { useContext } from "react";
+import { FormContext } from "../hooks/FormContext";
+
+function RightSide () {
+    const { resultsText, resultsParagraph, resultsContainer, selected, monthlyRepayments, totalRepayment, monthlyInterestRate, totalInterestRate } = useContext(FormContext);
+
     return (
         <div className="bg-[hsl(202,55%,16%)] md:rounded-bl-[64px] py-8 px-4 text-center flex flex-col items-center">
             <img src="/assets/images/illustration-empty.svg" alt="illustration image" />

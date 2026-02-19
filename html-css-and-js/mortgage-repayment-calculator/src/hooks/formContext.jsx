@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 
-export function useForm () {
+const FormContext = createContext();
+
+export function FormProvider ({ children }) {
     const longResultsParagraphText = "Complete the form and click 'Calculate Repayments' to see what your monthly repayments would be."
 
     // useStates
@@ -85,28 +87,38 @@ export function useForm () {
         setMonthlyRepayments("");
         setTotalRepayment("");
         setResultsContainer(false);
+        setSelected("");
     }
 
-    return {
-        handleCalculations,
-        mortgageAmount,
-        setMortgageAmount,
-        mortgageTerm,
-        setMortgageTerm,
-        interestRate,
-        setInterestRate,
-        mortgageAmountError,
-        mortgageTermError,
-        interestRateError,
-        resultsText,
-        resultsParagraph,
-        resultsContainer,
-        monthlyRepayments,
-        totalRepayment,
-        monthlyInterestRate,
-        totalInterestRate,
-        clearForm,
-        selected,
-        setSelected
-    };
+    return (
+        <FormContext.Provider 
+            value={{
+                handleCalculations,
+                mortgageAmount,
+                setMortgageAmount,
+                mortgageTerm,
+                setMortgageTerm,
+                interestRate,
+                setInterestRate,
+                mortgageAmountError,
+                mortgageTermError,
+                interestRateError,
+                resultsText,
+                resultsParagraph,
+                resultsContainer,
+                monthlyRepayments,
+                totalRepayment,
+                monthlyInterestRate,
+                totalInterestRate,
+                clearForm,
+                selected,
+                setSelected
+            }}
+        >
+            {children}
+        </FormContext.Provider>
+    );
+
 }
+
+export { FormContext }

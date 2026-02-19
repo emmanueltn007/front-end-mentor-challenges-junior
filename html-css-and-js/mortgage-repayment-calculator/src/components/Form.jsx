@@ -1,17 +1,9 @@
-function Form ({ 
-  handleCalculations, 
-  mortgageAmount, 
-  setMortgageAmount, 
-  mortgageTerm, 
-  setMortgageTerm,
-  interestRate,
-  setInterestRate,
-  mortgageAmountError,
-  mortgageTermError,
-  interestRateError,
-  selected,
-  setSelected
-}) {
+import { useContext } from "react";
+import { FormContext } from "../hooks/FormContext";
+
+function Form () {
+    const { handleCalculations, mortgageAmount, setMortgageAmount, mortgageAmountError, mortgageTerm, setMortgageTerm, mortgageTermError, interestRate, setInterestRate, interestRateError, setSelected, selected } = useContext(FormContext);
+
     return (
         <form noValidate onSubmit={(e) => handleCalculations(e)} className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
