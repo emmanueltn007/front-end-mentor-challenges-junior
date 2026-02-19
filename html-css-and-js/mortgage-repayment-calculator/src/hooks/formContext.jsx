@@ -21,7 +21,6 @@ export function FormProvider ({ children }) {
     const [totalInterestRate, setTotalInterestRate] = useState("");
     const [selected, setSelected] = useState("");
 
-
     const handleCalculations = (e) => {
         e.preventDefault();
 

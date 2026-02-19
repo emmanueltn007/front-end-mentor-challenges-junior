@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FormContext } from "../hooks/FormContext";
 
-function RightSide () {
+function ResultsDisplayCard () {
     const { resultsText, resultsParagraph, resultsContainer, selected, monthlyRepayments, totalRepayment, monthlyInterestRate, totalInterestRate } = useContext(FormContext);
 
     return (
@@ -49,4 +49,4 @@ function RightSide () {
     );
 }
 
-export default RightSide
+export default ResultsDisplayCard
