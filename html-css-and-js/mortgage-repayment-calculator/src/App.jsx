@@ -7,11 +7,9 @@ function App() {
 
   return ( 
     <FormProvider>
-      <main>
-        <div>
+      <main className="font-['Plus Jarkata Sans',sans-serif] flex flex-col md:flex-row">
           <FormCard />
           <ResultsDisplayCard />
-        </div>
       </main>
     </FormProvider>
   );
