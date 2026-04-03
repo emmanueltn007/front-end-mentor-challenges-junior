@@ -10,7 +10,6 @@ function Form() {
     <form
       noValidate
       onSubmit={(e) => handleCalculations(e)}
-      className="flex flex-col gap-4"
     >
       <FormInputs />
       <SubmitFormButton />

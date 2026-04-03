@@ -6,7 +6,7 @@ import Testimonials from "./main-componets/Testimonials";
 
 function Main () {
     return (
-        <main className="flex flex-col gap-24 relative">
+        <main className="flex flex-col gap-24 relative h-full w-full bg-[url('/images/bg-curvy-desktop.svg')] bg-cover bg-no-repeat bg-center">
             <Intro />
             <Services />
             <StayProductive />

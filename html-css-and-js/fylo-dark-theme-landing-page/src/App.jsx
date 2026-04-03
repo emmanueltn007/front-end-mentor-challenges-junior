@@ -4,7 +4,7 @@ import Main from "./components/Main";
 
 function App () {
     return (
-        <div className="bg-[hsl(219,30%,18%)]">
+        <div className="min-h-screen w-screen bg-[hsl(219,30%,18%)]">
             <Header />
             <Main />
             <Footer />

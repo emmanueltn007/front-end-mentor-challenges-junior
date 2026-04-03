@@ -3,7 +3,7 @@ import testimonials from "../../utilities/customerTestimonials.js"
 function Testimonials () {
     return (
         <section 
-            className="text-[hsl(0,0%,100%)] grid grid-cols-1 md:grid-cols-3 gap-8  py-8 px-12 md:px-16 relative"
+            className="h-full text-[hsl(0,0%,100%)] grid grid-cols-1 md:grid-cols-3 gap-8  py-8 px-12 md:px-16 relative"
         >
             <img 
                 className="absolute z-5 top-0 md:top-2 left-14 h-8"
